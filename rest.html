@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galaxy Bites Restaurant</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        header {
+            text-align: center;
+            background-color: #222;
+            color: white;
+            padding: 20px;
+        }
+
+        #header-img {
+            width: 100%;
+            max-width: 700px;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        nav {
+            margin-top: 15px;
+        }
+
+        nav h3 {
+            display: inline-block;
+            margin: 10px;
+        }
+
+        nav a {
+            color: #ffd700;
+            text-decoration: none;
+        }
+
+        main {
+            width: 90%;
+            max-width: 1000px;
+            margin: 20px auto;
+        }
+
+        section {
+            background: white;
+            padding: 20px;
+            margin-bottom: 25px;
+            border-radius: 10px;
+        }
+
+        article {
+            margin-bottom: 25px;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 15px;
+        }
+
+        article img {
+            width: 250px;
+            border-radius: 10px;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            margin-bottom: 20px;
+        }
+
+        h3 {
+            margin-bottom: 8px;
+        }
+
+        form label {
+            display: block;
+            margin-top: 12px;
+            margin-bottom: 5px;
+        }
+
+        textarea {
+            width: 100%;
+            height: 100px;
+            padding: 10px;
+        }
+
+        input[type="number"] {
+            width: 80px;
+            padding: 5px;
+        }
+
+        input[type="submit"] {
+            margin-top: 20px;
+            background-color: #222;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        footer {
+            text-align: center;
+            background-color: #222;
+            color: white;
+            padding: 15px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+
+        <img
+            id="header-img"
+            src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4"
+            alt="Restaurant Banner"
+        >
+
+        <h1>Galaxy Bites Restaurant</h1>
+
+        <nav>
+            <h3><a href="#menu">Menu</a></h3>
+            <h3><a href="#order-form">Place Your Order</a></h3>
+        </nav>
+
+    </header>
+
+    <main>
+
+        <section id="menu">
+            <h2>Menu</h2>
+
+            <article>
+                <img
+                    src="https://images.unsplash.com/photo-1513104890138-7c749659a591"
+                    alt="Pizza"
+                >
+
+                <h3>Cosmic Pizza</h3>
+
+                <p>
+                    Freshly baked pizza loaded with mozzarella cheese,
+                    vegetables, and our special sauce.
+                    <i>Price: ₹299</i>
+                </p>
+            </article>
+
+            <article>
+                <img
+                    src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd"
+                    alt="Burger"
+                >
+
+                <h3>Rocket Burger</h3>
+
+                <p>
+                    A juicy burger with crispy lettuce, cheese,
+                    and a flavorful grilled patty.
+                    <i>Price: ₹199</i>
+                </p>
+            </article>
+
+            <article>
+                <img
+                    src="https://images.unsplash.com/photo-1551024601-bec78aea704b"
+                    alt="Milkshake"
+                >
+
+                <h3>Milky Way Shake</h3>
+
+                <p>
+                    Thick chocolate milkshake topped with whipped cream.
+                    <i>Price: ₹149</i>
+                </p>
+            </article>
+        </section>
+
+        <section id="order-form">
+
+            <h2>Place Your Order</h2>
+
+            <form>
+
+                <label for="pizza">
+                    Cosmic Pizza Quantity:
+                </label>
+                <input
+                    type="number"
+                    id="pizza"
+                    name="pizza"
+                    min="0"
+                    value="0"
+                >
+
+                <label for="burger">
+                    Rocket Burger Quantity:
+                </label>
+                <input
+                    type="number"
+                    id="burger"
+                    name="burger"
+                    min="0"
+                    value="0"
+                >
+
+                <label for="shake">
+                    Milky Way Shake Quantity:
+                </label>
+                <input
+                    type="number"
+                    id="shake"
+                    name="shake"
+                    min="0"
+                    value="0"
+                >
+
+                <label>
+                    Extra Add-ons:
+                </label>
+
+                <input type="checkbox" id="cheese" name="addon">
+                <label for="cheese">Extra Cheese</label>
+
+                <input type="checkbox" id="fries" name="addon">
+                <label for="fries">French Fries</label>
+
+                <input type="checkbox" id="drink" name="addon">
+                <label for="drink">Cold Drink</label>
+
+                <br><br>
+
+                <label>
+                    Delivery Type:
+                </label>
+
+                <input type="radio" id="delivery" name="service">
+                <label for="delivery">Home Delivery</label>
+
+                <input type="radio" id="pickup" name="service">
+                <label for="pickup">Pickup</label>
+
+                <br><br>
+
+                <label for="special-request">
+                    Special Requests:
+                </label>
+
+                <textarea
+                    id="special-request"
+                    name="special-request"
+                    placeholder="Any special instructions?"
+                ></textarea>
+
+                <br>
+
+                <input
+                    type="submit"
+                    value="Go To Checkout"
+                >
+
+            </form>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Made with love by Aakira</p>
+    </footer>
+
+</body>
+
+</html>
